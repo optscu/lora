@@ -1,0 +1,222 @@
+/* 全局变量：明亮、尊贵、极具气势的跨国企业配色 */
+:root {
+    --bg-color: #f8fafc;        /* 奢华明亮浅灰底色 */
+    --card-bg: #ffffff;         /* 纯白高光卡片 */
+    --text-main: #0f172a;       /* 沉稳黑曜石色（主文字） */
+    --text-muted: #475569;      /* 优雅石墨灰（副文字） */
+    --primary: #0f2942;         /* 尊贵深海蓝（标题与主调） */
+    --accent: #2563eb;          /* 科技深睿蓝（高亮） */
+    --accent-light: #eff6ff;    /* 睿蓝轻盈背景 */
+    --border: #e2e8f0;          /* 细腻丝滑边框线 */
+    --shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.04), 0 8px 10px -6px rgba(15, 23, 42, 0.04);
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    font-family: var(--font-sans);
+    line-height: 1.7;
+    padding-top: 90px;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* 奢华企业级导航栏 */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    border-bottom: 1px solid var(--border);
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4rem 2rem;
+}
+
+.logo {
+    font-weight: 800;
+    color: var(--primary);
+    text-decoration: none;
+    font-size: 1.3rem;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+}
+
+/* 现代圆角语言切换按钮 */
+.lang-selector {
+    display: flex;
+    gap: 0.4rem;
+}
+
+.lang-btn {
+    background: var(--bg-color);
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+    padding: 0.4rem 0.8rem;
+    cursor: pointer;
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    font-weight: 600;
+    border-radius: 20px;
+    transition: all 0.2s ease-in-out;
+}
+
+.lang-btn:hover, .lang-btn.active {
+    border-color: var(--accent);
+    color: #ffffff;
+    background: var(--accent);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+}
+
+/* 气势磅礴的宽幅布局 */
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+
+section {
+    margin-bottom: 6rem;
+}
+
+/* 恢弘的大标题设计 */
+h1 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: var(--primary);
+    line-height: 1.25;
+    margin-bottom: 1.8rem;
+    letter-spacing: -0.04em;
+}
+
+h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 2rem;
+    letter-spacing: -0.02em;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 4px;
+    background: var(--accent);
+    border-radius: 2px;
+}
+
+p {
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+    font-size: 1.05rem;
+}
+
+/* 智库级尊贵卡片网格 */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 2.5rem;
+}
+
+@media (max-width: 768px) {
+    .grid { grid-template-columns: 1fr; }
+    h1 { font-size: 2.2rem; }
+}
+
+.card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    padding: 2.2rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px -10px rgba(15, 23, 42, 0.08), 0 10px 15px -5px rgba(15, 23, 42, 0.03);
+}
+
+.card h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+    color: var(--primary);
+}
+
+/* 法律合规板块排版 */
+.legal-text {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    padding: 3rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+}
+.legal-text h3 {
+    margin-top: 2rem;
+    color: var(--primary);
+    font-size: 1.2rem;
+}
+
+/* 高端商务页脚 */
+footer {
+    background: var(--primary);
+    color: #ffffff;
+    padding: 4rem 2rem;
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: 8rem;
+}
+
+footer p {
+    color: #94a3b8;
+}
+
+footer a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 0.8rem;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+footer a:hover {
+    color: var(--accent);
+}
+
+/* 多语言驱动引擎 */
+.lang { display: none !important; }
+html[lang="en"] .lang-en { display: block !important; }
+html[lang="en"] span.lang-en, html[lang="en"] a.lang-en { display: inline !important; }
+html[lang="zh"] .lang-zh { display: block !important; }
+html[lang="zh"] span.lang-zh, html[lang="zh"] a.lang-zh { display: inline !important; }
+html[lang="de"] .lang-de { display: block !important; }
+html[lang="de"] span.lang-de, html[lang="de"] a.lang-de { display: inline !important; }
+html[lang="fr"] .lang-fr { display: block !important; }
+html[lang="fr"] span.lang-fr, html[lang="fr"] a.lang-fr { display: inline !important; }
+html[lang="es"] .lang-es { display: block !important; }
+html[lang="es"] span.lang-es, html[lang="es"] a.lang-es { display: inline !important; }
+html[lang="ja"] .lang-ja { display: block !important; }
+html[lang="ja"] span.lang-ja, html[lang="ja"] a.lang-ja { display: inline !important; }
+html[lang="ko"] .lang-ko { display: block !important; }
+html[lang="ko"] span.lang-ko, html[lang="ko"] a.lang-ko { display: inline !important; }
