@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - NUMERIQ SOLUTIONS LTD</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">NUMERIQ SOLUTIONS</a>
+            <div class="lang-selector">
+                <button class="lang-btn active" onclick="setLang('en')">EN</button>
+                <button class="lang-btn" onclick="setLang('zh')">中文</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <h1 class="lang lang-en">Privacy Policy (GDPR Compliant)</h1>
+        <h1 class="lang lang-zh">机构隐私数据保护政策 (符合 GDPR 标准)</h1>
+
+        <div class="legal-text">
+            <div class="lang lang-en">
+                <p>Under the General Data Protection Regulation (GDPR), NUMERIQ SOLUTIONS LTD strictly enforces the absolute confidentiality of all corporate communication and proprietary datasets.</p>
+                <h3>Data Isolation</h3>
+                <p>Any empirical data provided for computational simulation is processed in highly secure local memory spaces and completely purged upon contractual milestone termination.</p>
+            </div>
+            <div class="lang lang-zh">
+                <p>根据欧盟《通用数据保护条例》（GDPR），NUMERIQ SOLUTIONS LTD 严格确保所有企业级客户商业机密及核心计算数据集的绝对隐私与隔离保护。</p>
+                <h3>数据脱敏与销毁机制</h3>
+                <p>凡由合作方机构提供用于进行离散数学演练与高性能加速测验的原始样本数据，均在安全的封闭环境中处理，并随项目里程碑的阶段性终止而执行全物理彻底销毁。</p>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function setLang(lang) {
+            document.documentElement.lang = lang;
+            localStorage.setItem('site-lang', lang);
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+                if(btn.innerText.toLowerCase() === lang || (lang==='zh' && btn.innerText==='中文')) btn.classList.add('active');
+            });
+        }
+        setLang(localStorage.getItem('site-lang') || 'en');
+    </script>
+</body>
+</html>

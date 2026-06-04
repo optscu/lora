@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Refund Policy - NUMERIQ SOLUTIONS LTD</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">NUMERIQ SOLUTIONS</a>
+            <div class="lang-selector">
+                <button class="lang-btn active" onclick="setLang('en')">EN</button>
+                <button class="lang-btn" onclick="setLang('zh')">中文</button>
+                <button class="lang-btn" onclick="setLang('de')">DE</button>
+                <button class="lang-btn" onclick="setLang('fr')">FR</button>
+                <button class="lang-btn" onclick="setLang('es')">ES</button>
+                <button class="lang-btn" onclick="setLang('ja')">JA</button>
+                <button class="lang-btn" onclick="setLang('ko')">KO</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <h1 class="lang lang-en">Refund & Cancellation Policy</h1>
+        <h1 class="lang lang-zh">机构退款与取消政策</h1>
+        <h1 class="lang lang-de">Rückerstattungsrichtlinie</h1>
+        <h1 class="lang lang-fr">Politique de Remboursement</h1>
+        <h1 class="lang lang-es">Política de Reembolso</h1>
+        <h1 class="lang lang-ja">返金・キャンセルポリシー</h1>
+        <h1 class="lang lang-ko">환불 및 취소 규정</h1>
+
+        <div class="legal-text">
+            <div class="lang lang-en">
+                <p><strong>Corporate Policy Notice:</strong> Because NUMERIQ SOLUTIONS LTD delivers exclusively bespoke high-performance scientific software engineering and technical consulting services, once a project milestone is officially initiated, we do not accept arbitrary refunds without cause. Settlement is strictly executed based on agreed contractual deliverables.</p>
+            </div>
+            <div class="lang lang-zh">
+                <p><strong>全球商业政策声明：</strong> 鉴于 NUMERIQ SOLUTIONS LTD 交付的产品属于高度定制化的高性能科学计算软件工程与数学架构咨询，一旦项目具体里程碑阶段正式签收并启动，本公司不接受任何无故退款。整体财务结算将严格依照合同约定的阶段性交付成果（Deliverables）执行。</p>
+            </div>
+            <div class="lang lang-de">
+                <p><strong>Wichtiger Hinweis:</strong> Da NUMERIQ SOLUTIONS LTD hochgradig maßgeschneiderte wissenschaftliche Softwareentwicklungs- und technische Beratungsleistungen erbringt, akzeptieren wir nach offiziellem Beginn eines Projektmeilensteins keine willkürlichen Rückerstattungen ohne Grund. Die Abrechnung erfolgt strikt auf Basis der vereinbarten vertraglichen Leistungen.</p>
+            </div>
+            <div class="lang lang-fr">
+                <p><strong>Avis Important:</strong> Étant donné que NUMERIQ SOLUTIONS LTD fournit des services d'ingénierie logicielle scientifique et de conseil technique hautement personnalisés, une fois qu'un jalon de projet est officiellement initié, nous n'acceptons aucun remboursement sans cause. Le règlement est strictement exécuté sur la base des livrables contractuels convenus.</p>
+            </div>
+            <div class="lang lang-es">
+                <p><strong>Aviso Importante:</strong> Dado que NUMERIQ SOLUTIONS LTD proporciona servicios de consultoría técnica e ingeniería de software científico altamente personalizados, una vez que se inicia oficialmente un hito del proyecto, no aceptamos reembolsos arbitrarios sin causa. El pago se ejecuta estrictamente en función de los entregables contractuales acordados.</p>
+            </div>
+            <div class="lang lang-ja">
+                <p><strong>重要なお知らせ：</strong> NUMERIQ SOLUTIONS LTD が提供するサービスは、高度にカスタマイズされた科学ソフトウェア開発および技術コンサルティングであるため、プロジェクトの特定フェーズが正式に開始された後は、お客様都合による一方的な返金には応じかねます。ご決済は、合意された成果物（Deliverables）に基づいて厳格に執行されます。</p>
+            </div>
+            <div class="lang lang-ko">
+                <p><strong>중요 고지:</strong> NUMERIQ SOLUTIONS LTD가 제공하는 서비스는 고도로 맞춤화된 과학 소프트웨어 개발 및 기술 컨설팅이므로, 프로젝트의 특정 마일스톤이 공식적으로 시작된 이후에는 합당한 사유 없는 임의 환불이 불가능합니다. 모든 결제는 합의된 계약상의 인도물(Deliverables)을 기준으로 엄격히 집행됩니다。</p>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function setLang(lang) {
+            document.documentElement.lang = lang;
+            localStorage.setItem('site-lang', lang);
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+                if(btn.innerText.toLowerCase() === lang || (lang==='zh' && btn.innerText==='中文') || (lang==='ja' && btn.innerText==='JA') || (lang==='ko' && btn.innerText==='KO') || (lang==='de' && btn.innerText==='DE') || (lang==='fr' && btn.innerText==='FR') || (lang==='es' && btn.innerText==='ES')) {
+                    btn.classList.add('active');
+                }
+            });
+        }
+        setLang(localStorage.getItem('site-lang') || 'en');
+    </script>
+</body>
+</html>

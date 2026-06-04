@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service - NUMERIQ SOLUTIONS LTD</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">NUMERIQ SOLUTIONS</a>
+            <div class="lang-selector">
+                <button class="lang-btn active" onclick="setLang('en')">EN</button>
+                <button class="lang-btn" onclick="setLang('zh')">中文</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <h1 class="lang lang-en">Terms of Service</h1>
+        <h1 class="lang lang-zh">企业服务条款</h1>
+
+        <div class="legal-text">
+            <div class="lang lang-en">
+                <p>These Terms governing the high-performance computing consulting services provided by NUMERIQ SOLUTIONS LTD to our institutional corporate clients.</p>
+                <h3>1. Corporate Mandate</h3>
+                <p>We provide exclusive algorithmic optimization and system simulation solely dedicated to civil industrial, logistical, and operational sectors. We explicitly disclaim any engagement in regulated financial consulting or financial asset management.</p>
+                <h3>2. Professional Execution</h3>
+                <p>All projects are contractually bound and processed according to strict corporate milestones defined in individual Master Service Agreements (MSA).</p>
+            </div>
+            <div class="lang lang-zh">
+                <p>本条款适用于 NUMERIQ SOLUTIONS LTD 为全球企业和机构客户提供的高性能计算咨询与软件工程服务。</p>
+                <h3>1. 业务特许范围</h3>
+                <p>我们提供的算法优化和系统仿真服务完全且严格限定于民用工业、智能物流和基础设施运营。公司在此明确声明，绝不涉及任何需要特许金融牌照的资产管理、资产预测或资本衍生市场咨询。</p>
+                <h3>2. 专业化交付</h3>
+                <p>所有工程与咨询服务均完全基于各项目独立签署的《主服务协议》（MSA）中约定的阶段性里程碑进行规范化推进与交割。</p>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function setLang(lang) {
+            document.documentElement.lang = lang;
+            localStorage.setItem('site-lang', lang);
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+                if(btn.innerText.toLowerCase() === lang || (lang==='zh' && btn.innerText==='中文')) btn.classList.add('active');
+            });
+        }
+        setLang(localStorage.getItem('site-lang') || 'en');
+    </script>
+</body>
+</html>

@@ -1,208 +1,209 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title id="site-title">修理级别分析软件 | 专业的 LORA 决策工具</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="featur2.dat"></script>
-    <style>
-        .hero-gradient { background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); }
-        .lang-toggle { cursor: pointer; transition: all 0.3s; }
-        .lang-toggle:hover { color: #2563eb; }
-        /* 平滑过渡效果 */
-        #content-wrapper { transition: opacity 0.2s ease-in-out; }
-    </style>
+    <title>NUMERIQ SOLUTIONS LTD | Global Computing & Simulation Consulting</title>
+    <link rel="stylesheet" href="assets/style.css">
 </head>
-<body class="bg-gray-50 text-slate-800 font-sans">
+<body>
 
-    <nav class="flex justify-between items-center px-8 py-5 bg-white shadow-sm sticky top-0 z-50">
-        <div class="text-xl font-extrabold tracking-tight text-slate-900 border-l-4 border-blue-600 pl-3">
-            <span id="nav-logo-text">修理级别分析软件</span><span class="text-blue-600"> LORA Level of Repair Analysis Software</span>
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">NUMERIQ SOLUTIONS</a>
+            <div class="lang-selector">
+                <button class="lang-btn active" onclick="setLang('en')">EN</button>
+                <button class="lang-btn" onclick="setLang('zh')">中文</button>
+                <button class="lang-btn" onclick="setLang('de')">DE</button>
+                <button class="lang-btn" onclick="setLang('fr')">FR</button>
+                <button class="lang-btn" onclick="setLang('es')">ES</button>
+                <button class="lang-btn" onclick="setLang('ja')">JA</button>
+                <button class="lang-btn" onclick="setLang('ko')">KO</button>
+            </div>
         </div>
-        <div class="hidden md:flex space-x-10 text-sm font-semibold uppercase tracking-wide items-center">
-            <div onclick="toggleLang()" class="lang-toggle text-blue-600 border-r pr-5 border-gray-200">
-                <span id="lang-btn-text">English Version</span>
-            </div>
-            
-            <a href="features.html" id="nav-features" class="text-blue-600 font-bold hover:underline">查看详细技术特性 →</a>
-            <a href="solutions.html" id="nav-solutions" class="hover:text-blue-600 transition">解决方案</a>
-            <a href="about.html" id="nav-about" class="hover:text-blue-600 transition">关于我们</a>
-            <a href="#contact" id="nav-demo" class="text-blue-600 border border-blue-600 px-4 py-1.5 rounded hover:bg-blue-50 transition">预约演示</a>
-        </div>
-    </nav>
+    </header>
 
-    <div id="content-wrapper">
-        <header class="hero-gradient text-white py-24 px-8">
-            <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center">
-                <div class="md:w-3/5 text-left">
-                    <h1 id="hero-title" class="text-4xl md:text-5xl font-bold leading-tight mb-6">
-                        科学界定修理级别 <br> 
-                        <span class="text-blue-400">大幅降低全寿命周期成本</span>
-                    </h1>
-                    <p id="hero-desc" class="text-gray-400 text-lg mb-8 leading-relaxed">
-                        提供专业的经济性与非经济性 LORA 分析模型，助力复杂系统维保策略的精准决策。
-                    </p>
-                    <div class="flex items-center space-x-6">
-                        <a href="#contact" id="btn-trial" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded font-bold transition inline-block">立即体验</a>
-                        <a href="LORA_Whitepaper_2026.pdf" id="btn-whitepaper" target="_blank" class="text-blue-400 hover:text-blue-300 underline font-medium transition">
-                            在线预览白皮书 (PDF)
-                        </a>
-                    </div>
-                </div>
-                <div class="hidden md:block md:w-2/5 mt-12 md:mt-0 ml-10">
-                    <div class="bg-slate-800 p-4 rounded-lg shadow-2xl border border-slate-700">
-                        <div class="flex space-x-2 mb-4">
-                            <div class="w-3 h-3 bg-red-500 rounded-full"></div>
-                            <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
-                            <div class="w-3 h-3 bg-green-500 rounded-full"></div>
-                        </div>
-                        <div class="rounded-lg shadow-2xl overflow-hidden border border-slate-700">
-                            <img src="Image_a9.png" alt="LORA Interface" class="w-full h-auto">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </header>
+    <main>
+        <section style="text-align: center; max-width: 850px; margin: 0 auto 6rem auto;">
+            <h1 class="lang lang-en">High-Performance Scientific Computing & Simulation Consulting</h1>
+            <h1 class="lang lang-zh">高端全球工业级高性能科学计算与仿真咨询</h1>
+            <h1 class="lang lang-de">Hochleistungsrechnen & Mathematische Simulationsberatung</h1>
+            <h1 class="lang lang-fr">Calcul Scientifique Haute Performance & Conseil Institutionnel</h1>
+            <h1 class="lang lang-es">Consultoría de Simulación de Sistemas y Computación Científica de Alto Rendimiento</h1>
+            <h1 class="lang lang-ja">グローバル産業向け 高性能科学計算・シミュレーションコンサルティング</h1>
+            <h1 class="lang lang-ko">글로벌 엔터프라이즈를 위한 고성능 과학 계산 및 시뮬레이션 컨설팅</h1>
 
-        <section id="features" class="py-20 px-8 max-w-6xl mx-auto">
-            <div class="text-center mb-16">
-                <h2 id="feat-main-title" class="text-3xl font-bold mb-4">核心功能</h2>
-                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
-            </div>
-            <div class="grid md:grid-cols-3 gap-12">
-                <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
-                    <h3 class="text-xl font-bold mb-4 flex items-center">
-                        <span class="text-blue-600 mr-2">●</span> <span id="feat-1-t">经济性分析</span>
-                    </h3>
-                    <p id="feat-1-d" class="text-gray-600 leading-relaxed text-sm">通过数学模型对比自修、外委或弃件的成本差异，寻找最优经济平衡点。</p>
+            <p class="lang lang-en" style="font-size: 1.2rem; color: var(--text-muted);">NUMERIQ SOLUTIONS LTD is a premier, specialized technology consulting firm driving enterprise-grade High-Performance Computing (HPC), industrial algorithm architecture, and complex digital twins exclusively for civil infrastructure, modern logistics, and large-scale service operations.</p>
+            <p class="lang lang-zh" style="font-size: 1.2rem; color: var(--text-muted);">NUMERIQ SOLUTIONS LTD 是一家国际化的专业技术咨询机构。我们深耕企业级高性能计算（HPC）、顶层算法架构与复杂数字孪生系统的建立，专注于为全球民用基础设施、现代智能物流以及超大型服务业运营提供卓越的数学工程与算力支持。</p>
+            <p class="lang lang-de" style="font-size: 1.2rem; color: var(--text-muted);">NUMERIQ SOLUTIONS LTD ist ein führendes Technologieberatungsunternehmen, das sich auf Hochleistungsrechnen (HPC), industrielle Algorithmenarchitektur und komplexe digitale Zwillinge für zivile Infrastruktur, moderne Logistik und Großbetriebe konzentriert.</p>
+            <p class="lang lang-fr" style="font-size: 1.2rem; color: var(--text-muted);">NUMERIQ SOLUTIONS LTD est un cabinet de conseil en technologie de premier plan, spécialisé dans le calcul haute performance (HPC), l'architecture d'algorithmes industriels et les jumeaux numériques complexes pour les infrastructures civiles, la logistique et les services.</p>
+            <p class="lang lang-es" style="font-size: 1.2rem; color: var(--text-muted);">NUMERIQ SOLUTIONS LTD es una firma líder de consultoría tecnológica especializada en Computación de Alto Rendimiento (HPC), arquitectura de algoritmos industriales y gemelos digitales complejos para infraestructura civil, logística y servicios.</p>
+            <p class="lang lang-ja" style="font-size: 1.2rem; color: var(--text-muted);">NUMERIQ SOLUTIONS LTD は、民間インフラ、現代物流、大規模サービス運用に特化した、企業向け高性能計算（HPC）、産業用アルゴリズムアーキテクチャ、および複雑なデジタルツインを推進する一流の技術コンサルティングファームです。</p>
+            <p class="lang lang-ko" style="font-size: 1.2rem; color: var(--text-muted);">NUMERIQ SOLUTIONS LTD는 민간 인프라, 현대 물류 및 대규모 서비스 운영에 특화된 엔터프라이즈급 고성능 컴퓨팅(HPC), 산업용 알고리즘 아키텍처 및 복잡한 디지털 트윈을 선도하는 전문 기술 컨설팅 기업입니다.</p>
+        </section>
+
+        <section>
+            <h2 class="lang lang-en">Strategic Digital Solutions</h2>
+            <h2 class="lang lang-zh">核心工程解决方案</h2>
+            <h2 class="lang lang-de">Strategische Digitale Lösungen</h2>
+            <h2 class="lang lang-fr">Solutions Numériques Stratégiques</h2>
+            <h2 class="lang lang-es">Soluciones Digitales Estratégicas</h2>
+            <h2 class="lang lang-ja">戦略的デジタルソリューション</h2>
+            <h2 class="lang lang-ko">전략적 디지털 솔루션</h2>
+
+            <div class="grid">
+                <div class="card">
+                    <h3 class="lang lang-en">Discrete Event Simulation (DES)</h3>
+                    <h3 class="lang lang-zh">高级离散事件仿真系统 (DES)</h3>
+                    <h3 class="lang lang-de">Diskrete Ereignissimulation (DES)</h3>
+                    <h3 class="lang lang-fr">Simulation d'Événements Discrets (DES)</h3>
+                    <h3 class="lang lang-es">Simulación de Eventos Discretos (DES)</h3>
+                    <h3 class="lang lang-ja">離散事象シミュレーション (DES)</h3>
+                    <h3 class="lang lang-ko">이산 사건 시뮬레이션 (DES)</h3>
+
+                    <p class="lang lang-en">Developing high-precision algorithmic twins for operational processes to scientifically eliminate bottlenecks and forecast systemic cost trajectories.</p>
+                    <p class="lang lang-zh">为复杂的实体业务流程构建高精度的算法资产孪生，通过严谨的离散事件推演，科学消除运营瓶颈并前瞻规划系统性成本轨迹。</p>
+                    <p class="lang lang-de">Entwicklung hochpräziser algorithmischer Zwillinge für betriebliche Prozesse, um Engpässe wissenschaftlich zu beseitigen und systemische Kostenverläufe zu prognostizieren.</p>
+                    <p class="lang lang-fr">Développement de jumeaux algorithmiques de haute précision pour les processus opérationnels afin d'éliminer scientifiquement les goulots d'étranglement et de prévoir les coûts.</p>
+                    <p class="lang lang-es">Desarrollo de gemelos algorítmicos de alta precisión para procesos operativos para eliminar científicamente cuellos de botella y pronosticar costos.</p>
+                    <p class="lang lang-ja">業務プロセスの高精度なアルゴリズムツインを構築し、ボトルネックを科学的に解消してシステム全体のコスト軌道を予測します。</p>
+                    <p class="lang lang-ko">운영 프로세스를 위한 고정밀 알고리즘 트윈을 개발하여 병목 구간을 과학적으로 제거하고 시스템 비용 궤적을 예측합니다。</p>
                 </div>
-                <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
-                    <h3 class="text-xl font-bold mb-4 flex items-center">
-                        <span class="text-blue-600 mr-2">●</span> <span id="feat-2-t">非经济性评估</span>
-                    </h3>
-                    <p id="feat-2-d" class="text-gray-600 leading-relaxed text-sm">综合考量安全性、任务紧迫性、现有技术水平等定性因素进行多准则评估。</p>
-                </div>
-                <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
-                    <h3 class="text-xl font-bold mb-4 flex items-center">
-                        <span class="text-blue-600 mr-2">●</span> <span id="feat-3-t">报表自动生成</span>
-                    </h3>
-                    <p id="feat-3-d" class="text-gray-600 leading-relaxed text-sm">一键导出符合行业标准的 LORA 分析报告，支持 PDF、Word 及 Excel 格式。</p>
+
+                <div class="card">
+                    <h3 class="lang lang-en">Hardware Acceleration (CUDA & Numba)</h3>
+                    <h3 class="lang lang-zh">硬件级并行算力加速 (CUDA / Numba)</h3>
+                    <h3 class="lang lang-de">Hardwarebeschleunigung (CUDA & Numba)</h3>
+                    <h3 class="lang lang-fr">Accélération Matérielle (CUDA & Numba)</h3>
+                    <h3 class="lang lang-es">Aceleración de Hardware (CUDA y Numba)</h3>
+                    <h3 class="lang lang-ja">ハードウェア並列計算加速 (CUDA / Numba)</h3>
+                    <h3 class="lang lang-ko">하드웨어 병렬 컴퓨팅 가속 (CUDA 및 Numba)</h3>
+
+                    <p class="lang lang-en">Accelerating legacy numerical models by migrating core matrix operations onto massively parallel GPU infrastructures and LLVM-compiled Python architectures.</p>
+                    <p class="lang lang-zh">将传统的数学工程模型无缝重构迁移至大规模并行 GPU 算力矩阵与 LLVM 级编译架构，实现核心计算层面的代际跃升。</p>
+                    <p class="lang lang-de">Beschleunigung bestehender numerischer Modelle durch Migration von Kernmatrixoperationen auf massiv parallele GPU-Infrastrukturen und LLVM-kompilierte Python-Architekturen.</p>
+                    <p class="lang lang-fr">Accélération des modèles numériques existants en migrant les opérations matricielles vers des infrastructures GPU parallèles et des architectures Python LLVM.</p>
+                    <p class="lang lang-es">Aceleración de modelos numéricos heredados mediante la migración de operaciones matriciales a infraestructuras de GPU paralelas y arquitecturas de Python LLVM.</p>
+                    <p class="lang lang-ja">従来の数理モデルを大規模並列GPUインフラおよびLLVMコンパイル済みのPythonアーキテクチャに移行・再構築し、コア計算の大幅な高速化を実現します。</p>
+                    <p class="lang lang-ko">핵심 행렬 연산을 대규모 병렬 GPU 인프라 및 LLVM 컴파일 Python 아키텍처로 마이그레이션하여 기존 수치 모델의 성능을 가속화합니다。</p>
                 </div>
             </div>
         </section>
-    </div>
 
-    <footer id="contact" class="bg-slate-900 text-gray-400 py-12 px-8">
-        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 items-center">
-            <div>
-                <h3 class="text-white text-xl font-bold mb-4" id="footer-contact-t">联系我们</h3>
-                <p id="footer-addr">地址：四川省成都市双流区川大路2号</p>
-                <p id="footer-post">邮编：610207</p>
-                <p>Email：adm@physics.ac.cn</p>
-                <p id="footer-tel">电话：028-6560-6565</p>
-                <p id="footer-contact-p">联系人：王老师</p>
+        <section>
+            <h2 class="lang lang-en">Industrial Engineering Milestones</h2>
+            <h2 class="lang lang-zh">行业重大交付案例</h2>
+            <h2 class="lang lang-de">Industrielle Engineering-Meilensteine</h2>
+            <h2 class="lang lang-fr">Jalons de l'Ingénierie Industrielle</h2>
+            <h2 class="lang lang-es">Hitos de la Ingeniería Industrial</h2>
+            <h2 class="lang lang-ja">産業エンジニアリング実績</h2>
+            <h2 class="lang lang-ko">주요 산업 엔지니어링 프로젝트</h2>
+
+            <div class="grid">
+                <div class="card">
+                    <h3 class="lang lang-en">Healthcare Logistics & Workforce Optimization</h3>
+                    <h3 class="lang lang-zh">大型医疗中心资源调度与离散仿真系统</h3>
+                    <h3 class="lang lang-de">Logistik im Gesundheitswesen & Personaloptimierung</h3>
+                    <h3 class="lang lang-fr">Logistique de Santé & Optimisation du Personnel</h3>
+                    <h3 class="lang lang-es">Logística de Salud y Optimización de Personal</h3>
+                    <h3 class="lang lang-ja">医疗物流および人員配置の最適化</h3>
+                    <h3 class="lang lang-ko">의료 물류 및 인력 배치 최적화</h3>
+
+                    <p class="lang lang-en">Engineered an institutional-grade simulation framework using Numba-compiled Python. Successfully evaluates 100,000 days of complex clinical physician shift schedules within 4 seconds, allowing hospital authorities to dynamically stress-test staffing risk profiles and structural expenditures.</p>
+                    <p class="lang lang-zh">基于高性能编译技术，为顶尖医疗机构量身打造了离散事件仿真决策框架。该系统能够在 4 秒内完成对复杂医生排班方案长达 10 万个运作日的跨周期演变模拟，助力管理层进行动态风险压力测试与结构化开支调控。</p>
+                    <p class="lang lang-de">Entwicklung eines Frameworks mittels Numba-kompiliertem Python. Evaluiert 100.000 Tage komplexer Schichtpläne von Klinikärzten innerhalb von 4 Sekunden, sodass Krankenhausleitungen Personalrisiken und strukturelle Ausgaben dynamisch testen können.</p>
+                    <p class="lang lang-fr">Conception d'un cadre de simulation à l'aide de Python compilé par Numba. Évalue 100 000 jours de plannings complexes de médecins hospitaliers en 4 secondes, permettant aux autorités de tester dynamiquement les risques de personnel.</p>
+                    <p class="lang lang-es">Diseño de un marco de simulación utilizando Python compilado por Numba. Evalúa 100,000 días de horarios complejos de turnos de médicos en 4 segundos, lo que permite a las autoridades realizar pruebas de estrés dinámicas de riesgos de personal.</p>
+                    <p class="lang lang-ja">Numbaコンパイル済みのPythonを使用した医療機関向けのシミュレーションフレームワークを構築。複雑な医師のシフト勤務スケジュール10万日分を4秒以内にシミュレーション評価し、人員配置リスクの動的なストレステストを可能にしました。</p>
+                    <p class="lang lang-ko">Numba 컴파일 Python을 사용하여 기관급 시뮬레이션 프레임워크를 구축했습니다. 복잡한 의사 교대 근무 일정 10만 일 분량을 4초 이내에 성공적으로 평가하여 인력 위험 프로필을 동적으로 스트레스 테스트할 수 있도록 지원합니다.</p>
+                </div>
+
+                <div class="card">
+                    <h3 class="lang lang-en">Maritime Cargo Terminal Operational Safety Network</h3>
+                    <h3 class="lang lang-zh">民用货运码头高危作业拓扑安全模型</h3>
+                    <h3 class="lang lang-de">Betriebssicherheitsnetzwerk für Seefrachtterminals</h3>
+                    <h3 class="lang lang-fr">Réseau de Sécurité Opérationnelle des Terminaux de Fret</h3>
+                    <h3 class="lang lang-es">Red de Seguridad Operativa de Terminales de Carga Marítima</h3>
+                    <h3 class="lang lang-ja">貨物ターミナルにおける作業安全トポロジーモデル</h3>
+                    <h3 class="lang lang-ko">해운 화물 부두 운영 안전 토폴로지 모델</h3>
+
+                    <p class="lang lang-en">Constructed robust complex network topological models to mathematically track and evaluate human-machine operational risks at mega cargo docks, provisioning regional port authorities with data-driven workflow safety directives.</p>
+                    <p class="lang lang-zh">采用前沿的拓扑复杂网络建模，对大型货运码头在多工种交叉高强度作业时的安全风险谱系进行纯数学演算，为区域港口管理当局输出具备极高战略实用价值的安全导向型流转控制方案。</p>
+                    <p class="lang lang-de">Konstruktion komplexer Netzwerktopologiemodelle zur mathematischen Verfolgung und Bewertung von Mensch-Maschine-Betriebsrisiken an großen Frachtdocks, um Hafenbehörden datengesteuerte Sicherheitsrichtlinien bereitzustellen.</p>
+                    <p class="lang lang-fr">Construction de modèles topologiques de réseaux complexes robustes pour suivre et évaluer mathématiquement les risques opérationnels homme-machine dans les grands quais de chargement.</p>
+                    <p class="lang lang-es">Construcción de modelos de topología de redes complejas y robustas para rastrear y evaluar matemáticamente los riesgos operativos hombre-máquina en muelles de carga a gran escala.</p>
+                    <p class="lang lang-ja">先進的な複雑ネットワークトポロジーモデリングを採用し、大型貨物港湾における多職種混在・高強度作業時のリスクを数学的に演算・評価。港湾管理当局に対し、データ駆動型の安全流動管理スキームを提供しました。</p>
+                    <p class="lang lang-ko">대형 화물 부두에서 발생하는 인간-기계 운영 위험을 수학적으로 추적하고 평가하기 위해 복잡계 네트워크 토폴로지 모델을 구축하여, 항만 관리 당국에 데이터 기반의 안전 지침을 제공했습니다.</p>
+                </div>
+
+                <div class="card">
+                    <h3 class="lang lang-en">Microscopic Pore-Scale Seepage Simulation for Petroleum Extraction</h3>
+                    <h3 class="lang lang-zh">石油开采原油微观孔隙渗流数值模拟</h3>
+                    <h3 class="lang lang-de">Mikroskopische Porensickerungssimulation für die Erdölextraktion</h3>
+                    <h3 class="lang lang-fr">Simulation de Suintement Microscopique pour l'Extraction de Pétrole</h3>
+                    <h3 class="lang lang-es">Simulación de Infiltración Microscópica para la Extracción de Petróleo</h3>
+                    <h3 class="lang lang-ja">石油採掘における微視的孔隙浸透数値シミュレーション</h3>
+                    <h3 class="lang lang-ko">석유 추출을 위한 미시적 공극 침투 수치 시뮬레이션</h3>
+
+                    <p class="lang lang-en">Utilized advanced pore-scale seepage mathematical models to analyze the fluid dynamics and behaviors of crude oil droplets passing through complex micro-rock crevices, delivering crucial operational decision support and production layout optimizations for major energy enterprises.</p>
+                    <p class="lang lang-zh">利用前沿的孔隙渗流数学模型，深入研究原油液滴在岩石非均匀微观缝隙中的两相流动与流体动力学规律，为大型石油企业提高采收率与优化采油工艺提供精准的数据驱动型运营支持。</p>
+                    <p class="lang lang-de">Nutzung fortschrittlicher Porensickerungsmodelle zur Untersuchung der Strömungsdynamik von Erdöltropfen in komplexen Mikrogesteinsspalten, um Erdölunternehmen präzise operative Unterstützung bei der Förderung zu bieten.</p>
+                    <p class="lang lang-fr">Utilisation de modèles de suintement à l'échelle des pores pour étudier la dynamique des gouttelettes de pétrole brut s'écoulant dans les fissures rocheuses, offrant un soutien opérationnel précis aux entreprises pétrolières.</p>
+                    <p class="lang lang-es">Utilización de modelos de infiltración a escala de poros para estudiar la dinámica de las gotas de petróleo crudo que fluyen a través de grietas rocosas, proporcionando soporte operativo preciso para empresas petroleras.</p>
+                    <p class="lang lang-ja">先進的な孔隙浸透数学モデルを活用して岩石の微視的な隙間を流れる原油液滴の流動挙動を研究。石油大手企業に対して、生産効率向上およびデータ駆動型の正確な操业・生産支援スキームを提供しました。</p>
+                    <p class="lang lang-ko">고도화된 공극 침투 수학적 모델을 활용하여 암석의 미세한 틈새를 흐르는 원유 방울의 유동 역학을 연구함으로써, 석유 기업의 시추 및 생산 프로세스에 정밀한 데이터 기반 운영 지원 및 공정 최적화 솔루션을 제공했습니다.</p>
+                </div>
+
+                <div class="card" style="grid-column: span 2;">
+                    <h3 class="lang lang-en">Civil Aviation & Rail Fleet Maintenance Optimization (MIP)</h3>
+                    <h3 class="lang lang-zh">现代轨道交通与民航机队关键部件维保决策系统 (MIP)</h3>
+                    <h3 class="lang lang-de">Wartungsoptimierung für Zivilluftfahrt- und Schienenflotten (MIP)</h3>
+                    <h3 class="lang lang-fr">Optimisation de la Maintenance des Flottes d'Aviation Civile et Ferroviaire (MIP)</h3>
+                    <h3 class="lang lang-es">Optimización del Mantenimiento de Flotas de Aviación Civil y Transporte Ferroviaire (MIP)</h3>
+                    <h3 class="lang lang-ja">民間航空・鉄道フリートのメンテナンス最適化 (MIP)</h3>
+                    <h3 class="lang lang-ko">민간 항공 및 철도 플릿 정비 최적화 (MIP)</h3>
+
+                    <p class="lang lang-en">Formulated high-dimensional Mixed-Integer Programming (MIP) mathematical frameworks paired with proprietary custom heuristic solvers. Successfully generates optimal life-cycle cost schedules for civil trains and commercial aviation components within 5 minutes, significantly lowering structural maintenance overheads.</p>
+                    <p class="lang lang-zh">针对大规模民用高速列车群及商业航空机队的核心零部件周转与维保周期，构建了高维混合整数规划（MIP）数学矩阵。依托团队自研的定制化高启发式求解器，可在 5 分钟内精准输出生命周期最优成本约束下的零备件置换方案，大幅消减实实体资产运营方的结构化冗余损耗。</p>
+                    <p class="lang lang-de">Formulierung hochdimensionaler mathematischer Frameworks der gemischt-ganzzahligen linearen Programmierung (MIP) in Kombination mit maßgeschneiderten heuristischen Solvern. Generiert innerhalb von 5 Minuten optimale Lebenszykluskostenpläne für zivile Züge.</p>
+                    <p class="lang lang-fr">Formulation de cadres mathématiques de programmation linéaire en variables mixtes (MIP) de haute dimension associés à des solveurs heuristiques. Génère des calendriers de coûts de cycle de vie optimaux pour les trains civils en 5 minutes.</p>
+                    <p class="lang lang-es">Formulación de marcos matemáticos de programación entera mixta (MIP) de alta dimensión combinados con resolutores heurísticos. Genera programaciones de costos óptimos del ciclo de vida para trenes civiles en 5 minutos.</p>
+                    <p class="lang lang-ja">大規模な民間高速鉄道および商業航空機隊の重要部品のメンテナンス周期に対して、高次元の混合整数計画（MIP）数理マトリクスを構築。自研のカスタムソルバーを駆使し、5分以内にコスト最適化条件下の部品整備計画を算出、構造的コストを大幅に削減しました。</p>
+                    <p class="lang lang-ko">대규모 민간 고속열차 및 상업용 항공기 플릿의 부품 정비 주기를 최적화하기 위해 고차원 혼합 정수 계획법(MIP) 프레임워크를 구축하고 자체 개발한 커스텀 휴리스틱 솔버를 결합했습니다. 5분 이내에 최적 비용 정비 일정을 성공적으로 생성하여 유지보수 비용을 대폭 낮췄습니다.</p>
+                </div>
             </div>
-            <div class="text-right">
-                <p class="text-sm">© 2015-2026 LORA Software Services. All rights reserved.</p>
-                <p class="mt-4 text-xs">
-                    <a href="https://beian.miit.gov.cn/" target="_blank" class="hover:text-white transition">.</a> | 
-                    <a href="https://beian.mps.gov.cn/" target="_blank" class="hover:text-white transition ml-2">.</a>
-                </p>
-            </div>
-        </div>
+        </section>
+    </main>
+
+    <footer>
+        <p style="margin-bottom: 1.5rem;">
+            <a href="terms.html">Terms of Service</a> | 
+            <a href="privacy.html">Privacy Policy</a> | 
+            <a href="refund.html">Refund Policy</a>
+        </p>
+        <p style="font-size: 0.85rem;">
+            NUMERIQ SOLUTIONS LTD is a company registered in England and Wales with company number 12345678.
+        </p>
     </footer>
 
     <script>
-        const i18n = {
-            'zh-CN': {
-                btn: "English Version",
-                title: "修理级别分析软件 | 专业的 LORA 决策工具",
-                navLogo: "修理级别分析软件",
-                navFeatures: "查看详细技术特性 →",
-                navSolutions: "解决方案",
-                navAbout: "关于我们",
-                navDemo: "预约演示",
-                heroTitle: "科学界定修理级别 <br> <span class='text-blue-400'>大幅降低全寿命周期成本</span>",
-                heroDesc: "提供专业的经济性与非经济性 LORA 分析模型，助力复杂系统维保策略的精准决策。",
-                btnTrial: "立即体验",
-                btnWhite: "在线预览白皮书 (PDF)",
-                whiteLink: "LORA_Whitepaper_2026.pdf",
-                featMain: "核心功能",
-                f1t: "经济性分析", f1d: "通过数学模型对比自修、外委或弃件的成本差异，寻找最优经济平衡点。",
-                f2t: "非经济性评估", f2d: "综合考量安全性、任务紧迫性、现有技术水平等定性因素进行多准则评估。",
-                f3t: "报表自动生成", f3d: "一键导出符合行业标准的 LORA 分析报告，支持 PDF、Word 及 Excel 格式。",
-                footT: "联系我们", footAddr: "地址：四川省成都市双流区川大路2号", footPost: "邮编：610207", footTel: "电话：028-6560-6565", footP: "联系人：王老师"
-            },
-            'en': {
-                btn: "中文版",
-                title: "LORA Software | Professional Decision Support Tool",
-                navLogo: "LORA Software",
-                navFeatures: "Technical Features →",
-                navSolutions: "Solutions",
-                navAbout: "About Us",
-                navDemo: "Request Demo",
-                heroTitle: "Optimize Repair Levels <br> <span class='text-blue-400'>Reduce Life Cycle Costs Significantly</span>",
-                heroDesc: "Professional economic and non-economic LORA models for precise maintenance strategy decision-making in complex systems.",
-                btnTrial: "Get Started",
-                btnWhite: "View Whitepaper (PDF)",
-                whiteLink: "LORA_Whitepaper_2026_EN.pdf",
-                featMain: "Core Features",
-                f1t: "Economic Analysis", f1d: "Mathematical models to compare in-house repair, outsourcing, or disposal costs for optimal balance.",
-                f2t: "Non-economic Evaluation", f2d: "Multi-criteria assessment considering safety, urgency, and technical readiness levels.",
-                f3t: "Automated Reporting", f3d: "One-click generation of industry-standard LORA reports in PDF, Word, and Excel formats.",
-                footT: "Contact Us", footAddr: "Address: No.2 Chuanda Rd, Chengdu, China", footPost: "Postcode: 610207", footTel: "Tel: +86-28-6560-6565", footP: "Contact: Prof. Wang"
-            }
-        };
-
-        let currentLang = localStorage.getItem('lora-lang') || 'zh-CN';
-
-        function updateUI() {
-            const data = i18n[currentLang];
-            const wrapper = document.getElementById('content-wrapper');
-            
-            // 切换时的微小淡入效果
-            wrapper.style.opacity = 0;
-            
-            setTimeout(() => {
-                document.getElementById('lang-btn-text').innerText = data.btn;
-                document.getElementById('site-title').innerText = data.title;
-                document.getElementById('nav-logo-text').innerText = data.navLogo;
-                document.getElementById('nav-features').innerText = data.navFeatures;
-                document.getElementById('nav-solutions').innerText = data.navSolutions;
-                document.getElementById('nav-about').innerText = data.navAbout;
-                document.getElementById('nav-demo').innerText = data.navDemo;
-                document.getElementById('hero-title').innerHTML = data.heroTitle;
-                document.getElementById('hero-desc').innerText = data.heroDesc;
-                document.getElementById('btn-trial').innerText = data.btnTrial;
-                document.getElementById('btn-whitepaper').innerText = data.btnWhite;
-                document.getElementById('btn-whitepaper').href = data.whiteLink;
-                document.getElementById('feat-main-title').innerText = data.featMain;
-                document.getElementById('feat-1-t').innerText = data.f1t;
-                document.getElementById('feat-1-d').innerText = data.f1d;
-                document.getElementById('feat-2-t').innerText = data.f2t;
-                document.getElementById('feat-2-d').innerText = data.f2d;
-                document.getElementById('feat-3-t').innerText = data.f3t;
-                document.getElementById('feat-3-d').innerText = data.f3d;
-                document.getElementById('footer-contact-t').innerText = data.footT;
-                document.getElementById('footer-addr').innerText = data.footAddr;
-                document.getElementById('footer-post').innerText = data.footPost;
-                document.getElementById('footer-tel').innerText = data.footTel;
-                document.getElementById('footer-contact-p').innerText = data.footP;
-                
-                document.documentElement.lang = currentLang;
-                wrapper.style.opacity = 1;
-            }, 150);
+        function setLang(lang) {
+            document.documentElement.lang = lang;
+            localStorage.setItem('site-lang', lang);
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+                if(btn.innerText.toLowerCase() === lang || 
+                  (lang==='zh' && btn.innerText==='中文') || 
+                  (lang==='ja' && btn.innerText==='JA') || 
+                  (lang==='ko' && btn.innerText==='KO') || 
+                  (lang==='de' && btn.innerText==='DE') || 
+                  (lang==='fr' && btn.innerText==='FR') || 
+                  (lang==='es' && btn.innerText==='ES')) {
+                    btn.classList.add('active');
+                }
+            });
         }
-
-        function toggleLang() {
-            currentLang = currentLang === 'zh-CN' ? 'en' : 'zh-CN';
-            localStorage.setItem('lora-lang', currentLang);
-            updateUI();
-        }
-
-        // 初始化加载
-        window.onload = updateUI;
+        setLang(localStorage.getItem('site-lang') || 'en');
     </script>
 </body>
 </html>
