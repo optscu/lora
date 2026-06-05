@@ -1,192 +1,453 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title id="site-title">关于我们 | 修理级别分析软件</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="about4.dat"></script>
-    <style>
-        .lang-toggle { cursor: pointer; transition: all 0.3s; }
-        .lang-toggle:hover { color: #2563eb; }
-        #content-wrapper { transition: opacity 0.2s ease-in-out; }
-    </style>
+    <title>About — NUMERIQ SOLUTIONS</title>
+    <meta name="description" content="About NUMERIQ SOLUTIONS LTD — global technology consultancy in high-performance computing, decision science and industrial supportability engineering.">
+    <link rel="stylesheet" href="assets/style.css">
 </head>
-<body class="bg-white text-slate-800 font-sans">
+<body>
 
-    <nav class="flex justify-between items-center px-8 py-5 border-b border-gray-100 sticky top-0 bg-white/90 backdrop-blur-md z-50">
-        <div class="text-xl font-extrabold text-slate-900">
-            <a href="index.html" id="nav-logo">修理级别分析<span class="text-blue-600">软件</span></a>
+<header>
+    <div class="nav-container">
+        <a href="index.html" class="logo">NUMERIQ SOLUTIONS</a>
+        <nav class="nav-links">
+            <a class="nav-link" href="index.html"><span class="lang lang-en">Home</span><span class="lang lang-zh">首页</span><span class="lang lang-de">Start</span><span class="lang lang-fr">Accueil</span><span class="lang lang-es">Inicio</span><span class="lang lang-ja">ホーム</span><span class="lang lang-ko">홈</span></a>
+            <a class="nav-link" href="features.html"><span class="lang lang-en">Technology</span><span class="lang lang-zh">技术能力</span><span class="lang lang-de">Technologie</span><span class="lang lang-fr">Technologie</span><span class="lang lang-es">Tecnología</span><span class="lang lang-ja">テクノロジー</span><span class="lang lang-ko">기술</span></a>
+            <a class="nav-link" href="solutions.html"><span class="lang lang-en">Solutions</span><span class="lang lang-zh">行业方案</span><span class="lang lang-de">Lösungen</span><span class="lang lang-fr">Solutions</span><span class="lang lang-es">Soluciones</span><span class="lang lang-ja">ソリューション</span><span class="lang lang-ko">솔루션</span></a>
+            <a class="nav-link active" href="about.html"><span class="lang lang-en">About</span><span class="lang lang-zh">关于我们</span><span class="lang lang-de">Über uns</span><span class="lang lang-fr">À propos</span><span class="lang lang-es">Nosotros</span><span class="lang lang-ja">会社情報</span><span class="lang lang-ko">회사 소개</span></a>
+            <a class="nav-link nav-cta" href="index.html#contact"><span class="lang lang-en">Contact</span><span class="lang lang-zh">联系咨询</span><span class="lang lang-de">Kontakt</span><span class="lang lang-fr">Contact</span><span class="lang lang-es">Contacto</span><span class="lang lang-ja">お問合せ</span><span class="lang lang-ko">문의</span></a>
+        </nav>
+        <div class="lang-selector">
+            <button class="lang-btn active" onclick="setLang('en')">EN</button>
+            <button class="lang-btn" onclick="setLang('zh')">中文</button>
+            <button class="lang-btn" onclick="setLang('de')">DE</button>
+            <button class="lang-btn" onclick="setLang('fr')">FR</button>
+            <button class="lang-btn" onclick="setLang('es')">ES</button>
+            <button class="lang-btn" onclick="setLang('ja')">JA</button>
+            <button class="lang-btn" onclick="setLang('ko')">KO</button>
         </div>
-        <div class="flex items-center space-x-8 text-sm font-bold uppercase">
-            <div onclick="toggleLang()" class="lang-toggle text-blue-600 border-r pr-5 border-gray-200">
-                <span id="lang-btn-text">English</span>
-            </div>
-            
-            <a href="index.html" id="nav-home" class="hover:text-blue-600">首页</a>
-            <a href="features.html" id="nav-features" class="text-blue-600 font-bold hover:underline">详细技术特性</a>
-            <a href="solutions.html" id="nav-solutions" class="hover:text-blue-600 transition">解决方案</a>
-            <a href="about.html" id="nav-about" class="hover:text-blue-600 transition">关于我们</a>
-            <a href="index.html#contact" id="nav-demo" class="text-blue-600 border border-blue-600 px-4 py-1.5 rounded hover:bg-blue-50 transition">预约演示</a>
-        </div>
-    </nav>
+    </div>
+</header>
 
-    <div id="content-wrapper">
-        <section class="py-24 px-8 max-w-5xl mx-auto">
-            <div class="flex flex-col md:flex-row items-center gap-16">
-                <div class="md:w-1/2">
-                    <h2 id="about-hero-t" class="text-4xl font-black mb-6 text-slate-900 leading-tight">专注复杂系统的<br><span class="text-blue-600">保障性决策科学</span></h2>
-                    <p id="about-hero-d1" class="text-slate-600 mb-6 leading-relaxed">
-                        我们成立于 2015 年，核心团队由资深可靠性工程（RAMS）专家、运筹学博士及资深软件架构师组成。
-                    </p>
-                    <p id="about-hero-d2" class="text-slate-600 leading-relaxed">
-                        在过去的时间里，我们发现许多重大工程项目在后期维保阶段面临着严重的成本失控与备件冗余。我们致力于通过数字化的修理级别分析（LORA）工具，将复杂的工程逻辑转化为清晰的决策路径。
-                    </p>
-                </div>
-                <div class="md:w-1/2 rounded-lg shadow-2xl overflow-hidden border border-slate-200">
-                    <img src="Image_a4.png" alt="Office" class="w-full h-auto">
-                </div>
-            </div>
-        </section>
+<main>
 
-        <section class="bg-slate-900 py-20 px-8 text-white">
-            <div class="max-w-6xl mx-auto">
-                <h3 id="milestone-t" class="text-3xl font-bold text-center mb-16">我们的足迹</h3>
-                <div class="grid md:grid-cols-4 gap-8">
-                    <div class="border-l border-slate-700 pl-6 py-4">
-                        <div class="text-blue-400 font-bold mb-2 uppercase tracking-widest text-sm">2021</div>
-                        <div id="m1-t" class="font-bold mb-2">核心算法研发</div>
-                        <p id="m1-d" class="text-slate-500 text-xs">成功开发基于全寿命周期成本（LCC）的非线性优化算法。</p>
-                    </div>
-                    <div class="border-l border-slate-700 pl-6 py-4">
-                        <div class="text-blue-400 font-bold mb-2 uppercase tracking-widest text-sm">2022</div>
-                        <div id="m2-t" class="font-bold mb-2">1.0 版本发布</div>
-                        <p id="m2-d" class="text-slate-500 text-xs">软件正式进入民用航空维护领域试运行。</p>
-                    </div>
-                    <div class="border-l border-slate-700 pl-6 py-4">
-                        <div class="text-blue-400 font-bold mb-2 uppercase tracking-widest text-sm">2023</div>
-                        <div id="m3-t" class="font-bold mb-2">标准符合性认证</div>
-                        <p id="m3-d" class="text-slate-500 text-xs">深度适配 GJB 2993A 标准，获得相关单位好评。</p>
-                    </div>
-                    <div class="border-l border-slate-700 pl-6 py-4">
-                        <div class="text-blue-400 font-bold mb-2 uppercase tracking-widest text-sm">2024</div>
-                        <div id="m4-t" class="font-bold mb-2">行业领跑者</div>
-                        <p id="m4-d" class="text-slate-500 text-xs">签约多家大型工业合作伙伴，开启全球化视野。</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="py-24 px-8 max-w-6xl mx-auto">
-            <div class="grid md:grid-cols-2 gap-12">
-                <div class="p-10 bg-blue-50 rounded-3xl">
-                    <h4 id="mission-t" class="text-2xl font-bold mb-4 text-blue-900">企业使命</h4>
-                    <p id="mission-c" class="text-blue-800/70 leading-relaxed italic">
-                        “用算法驱动维保决策，为高端制造提供最优保障策略支持，消灭每一分不必要的维修浪费。”
-                    </p>
-                </div>
-                <div class="p-10 bg-slate-50 rounded-3xl">
-                    <h4 id="vision-t" class="text-2xl font-bold mb-4 text-slate-900">技术理念</h4>
-                    <ul class="space-y-3 text-slate-600">
-                        <li class="flex items-center"><span class="w-1.5 h-1.5 bg-blue-600 rounded-full mr-2"></span> <span id="v1">数据驱动：拒绝拍脑袋决策</span></li>
-                        <li class="flex items-center"><span class="w-1.5 h-1.5 bg-blue-600 rounded-full mr-2"></span> <span id="v2">标准先行：严格遵循国际通用体系</span></li>
-                        <li class="flex items-center"><span class="w-1.5 h-1.5 bg-blue-600 rounded-full mr-2"></span> <span id="v3">持续进化：紧跟复杂系统保障新技术</span></li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+    <div class="page-header">
+        <span class="eyebrow" style="background:rgba(255,255,255,0.12); color:#fde68a; border-color:rgba(253,224,71,0.3);">
+            <span class="lang lang-en">About NUMERIQ</span>
+            <span class="lang lang-zh">关于 NUMERIQ</span>
+            <span class="lang lang-de">Über NUMERIQ</span>
+            <span class="lang lang-fr">À propos de NUMERIQ</span>
+            <span class="lang lang-es">Sobre NUMERIQ</span>
+            <span class="lang lang-ja">NUMERIQについて</span>
+            <span class="lang lang-ko">NUMERIQ 소개</span>
+        </span>
+        <h1>
+            <span class="lang lang-en">A decade of decision science for complex systems</span>
+            <span class="lang lang-zh">十年深耕复杂系统的决策科学</span>
+            <span class="lang lang-de">Ein Jahrzehnt Entscheidungswissenschaft für komplexe Systeme</span>
+            <span class="lang lang-fr">Une décennie au service de la science décisionnelle</span>
+            <span class="lang lang-es">Una década de ciencia de decisión para sistemas complejos</span>
+            <span class="lang lang-ja">複雑システムの意思決定科学を支える10年</span>
+            <span class="lang lang-ko">복잡 시스템 의사결정 과학의 10년</span>
+        </h1>
+        <p>
+            <span class="lang lang-en">NUMERIQ SOLUTIONS LTD turns advanced operations research, parallel computing and supportability engineering into clear, defensible business decisions for institutional clients worldwide.</span>
+            <span class="lang lang-zh">NUMERIQ SOLUTIONS LTD 将先进的运筹学、并行计算与保障性工程，转化为面向全球机构客户的清晰、可论证的商业决策。</span>
+            <span class="lang lang-de">NUMERIQ SOLUTIONS LTD verwandelt Operations Research und HPC in verteidigbare Geschäftsentscheidungen.</span>
+            <span class="lang lang-fr">NUMERIQ SOLUTIONS LTD transforme la recherche opérationnelle en décisions défendables.</span>
+            <span class="lang lang-es">NUMERIQ SOLUTIONS LTD convierte investigación operativa en decisiones defendibles.</span>
+            <span class="lang lang-ja">先進OR・並列計算・保守工学を、確かなビジネス意思決定に変換します。</span>
+            <span class="lang lang-ko">고급 운영 연구·병렬 컴퓨팅·유지보수 공학을 확실한 의사결정으로 전환합니다.</span>
+        </p>
     </div>
 
-    <footer class="py-12 border-t text-center text-slate-400 text-sm">
-        <p id="footer-text">© 2015-2026 LORA Software. 专注保障性分析领域的数字化转型.</p>
-    </footer>
+    <!-- ============ About intro ============ -->
+    <section>
+        <div class="feature-row">
+            <div class="feature-text">
+                <span class="eyebrow">
+                    <span class="lang lang-en">Our story</span>
+                    <span class="lang lang-zh">我们的故事</span>
+                    <span class="lang lang-de">Unsere Geschichte</span>
+                    <span class="lang lang-fr">Notre histoire</span>
+                    <span class="lang lang-es">Nuestra historia</span>
+                    <span class="lang lang-ja">私たちのストーリー</span>
+                    <span class="lang lang-ko">우리 이야기</span>
+                </span>
+                <h2>
+                    <span class="lang lang-en">Born to industrialise decision science</span>
+                    <span class="lang lang-zh">为决策科学的工业化而生</span>
+                    <span class="lang lang-de">Gegründet zur Industrialisierung der Entscheidungswissenschaft</span>
+                    <span class="lang lang-fr">Né pour industrialiser la science décisionnelle</span>
+                    <span class="lang lang-es">Nacidos para industrializar la ciencia de decisión</span>
+                    <span class="lang lang-ja">意思決定科学の産業化のために</span>
+                    <span class="lang lang-ko">의사결정 과학의 산업화를 위해 설립</span>
+                </h2>
+                <p class="lang lang-en">Our core team is composed of senior reliability engineering (RAMS) experts, operations-research PhDs and veteran software architects with backgrounds in civil aviation, energy and high-end manufacturing.</p>
+                <p class="lang lang-zh">我们的核心团队由资深可靠性工程（RAMS）专家、运筹学博士与资深软件架构师组成，专业背景覆盖民航、能源与高端制造。</p>
+                <p class="lang lang-de">Unser Kernteam besteht aus RAMS-Experten, OR-Doktoren und erfahrenen Architekten aus Luftfahrt, Energie und High-End-Fertigung.</p>
+                <p class="lang lang-fr">Notre équipe rassemble experts RAMS, docteurs en RO et architectes logiciels chevronnés.</p>
+                <p class="lang lang-es">Nuestro equipo reúne expertos en RAMS, doctores en IO y arquitectos veteranos.</p>
+                <p class="lang lang-ja">RAMS専門家・運筹学博士・ベテランアーキテクトで構成され、民航・エネルギー・高端製造の経歴を有します。</p>
+                <p class="lang lang-ko">RAMS 전문가, 운영연구 박사, 베테랑 아키텍트로 구성되며 민항·에너지·하이엔드 제조 경력을 갖췄습니다.</p>
+                <p class="lang lang-en">We observed that many major engineering programmes experience severe cost overruns and spare-part redundancy during the maintenance phase. NUMERIQ exists to translate complex engineering logic into clear, decision-grade computational tools.</p>
+                <p class="lang lang-zh">我们观察到许多重大工程项目在后期维保阶段面临严重的成本失控与备件冗余。NUMERIQ 的存在，是把复杂的工程逻辑转化为清晰、可决策级别的计算工具。</p>
+                <p class="lang lang-de">Viele Großprogramme leiden unter Kostenüberschreitungen in der Wartungsphase. NUMERIQ macht das beherrschbar.</p>
+                <p class="lang lang-fr">De nombreux programmes souffrent de dérives de coûts en maintenance. NUMERIQ rend cela maîtrisable.</p>
+                <p class="lang lang-es">Muchos programas sufren sobrecostos en mantenimiento. NUMERIQ lo hace manejable.</p>
+                <p class="lang lang-ja">大型プロジェクトの保守段階で起きるコスト超過を解決します。</p>
+                <p class="lang lang-ko">대형 사업의 유지보수 단계 비용 초과 문제를 해결합니다.</p>
+            </div>
+            <div class="feature-image-card" style="padding: 0;">
+                <img src="assets/Image_a4.png" alt="Modern collaborative workspace" style="border-radius: 20px;">
+            </div>
+        </div>
+    </section>
 
-    <script>
-        const i18n = {
-            'zh-CN': {
-                btn: "English Version",
-                title: "关于我们 | 修理级别分析软件",
-                navLogo: "修理级别分析软件",
-                navHome: "首页", navFeat: "详细技术特性", navSol: "解决方案", navAbout: "关于我们", navDemo: "预约演示",
-                aboutHeroT: "专注复杂系统的<br><span class='text-blue-600'>保障性决策科学</span>",
-                aboutHeroD1: "我们成立于 2015 年，核心团队由资深可靠性工程（RAMS）专家、运筹学博士及资深软件架构师组成。",
-                aboutHeroD2: "在过去的时间里，我们发现许多重大工程项目在后期维保阶段面临着严重的成本失控与备件冗余。我们致力于通过数字化的修理级别分析（LORA）工具，将复杂的工程逻辑转化为清晰的决策路径。",
-                milestoneT: "我们的足迹",
-                m1t: "核心算法研发", m1d: "成功开发基于全寿命周期成本（LCC）的非线性优化算法。",
-                m2t: "1.0 版本发布", m2d: "软件正式进入民用航空维护领域试运行。",
-                m3t: "标准符合性认证", m3d: "深度适配 GJB 2993A 标准，获得相关单位好评。",
-                m4t: "行业领跑者", m4d: "签约多家大型工业合作伙伴，开启全球化视野。",
-                missionT: "企业使命",
-                missionC: "“用算法驱动维保决策，为高端制造提供最优保障策略支持，消灭每一分不必要的维修浪费。”",
-                visionT: "技术理念",
-                v1: "数据驱动：拒绝拍脑袋决策", v2: "标准先行：严格遵循国际通用体系", v3: "持续进化：紧跟复杂系统保障新技术",
-                footer: "© 2015-2026 LORA Software. 专注保障性分析领域的数字化转型。"
-            },
-            'en': {
-                btn: "中文版",
-                title: "About Us | LORA Software",
-                navLogo: "LORA Software",
-                navHome: "Home", navFeat: "Technical Features", navSol: "Solutions", navAbout: "About Us", navDemo: "Request Demo",
-                aboutHeroT: "Dedicated to <br><span class='text-blue-600'>Decision Science</span> for Complex Systems",
-                aboutHeroD1: "Founded in 2015, our core team consists of senior Reliability Engineering (RAMS) experts, PhDs in Operations Research, and veteran software architects.",
-                aboutHeroD2: "We observed that many major engineering projects face severe cost overruns and spare part redundancies during the maintenance phase. We are committed to transforming complex engineering logic into clear decision-making paths through digital LORA tools.",
-                milestoneT: "Our Milestones",
-                m1t: "Core Algorithm R&D", m1d: "Successfully developed a non-linear optimization algorithm based on Life Cycle Cost (LCC).",
-                m2t: "Version 1.0 Release", m2d: "Software officially entered pilot operation in the civil aviation maintenance sector.",
-                m3t: "Standard Compliance", m3d: "Deeply adapted to international maintenance standards, receiving high acclaim from industry authorities.",
-                m4t: "Industry Leader", m4d: "Partnered with multiple large-scale industrial corporations, expanding into global markets.",
-                missionT: "Our Mission",
-                missionC: "“To drive maintenance decisions with algorithms, providing optimal support strategies for high-end manufacturing and eliminating unnecessary waste.”",
-                visionT: "Technical Philosophy",
-                v1: "Data-Driven: No more intuitive decision-making.", v2: "Standards First: Strict adherence to international GJB/MIL frameworks.", v3: "Continuous Evolution: Keeping pace with emerging maintenance technologies.",
-                footer: "© 2015-2026 LORA Software. Focusing on the Digital Transformation of Supportability Analysis."
-            }
-        };
+    <!-- ============ Milestones ============ -->
+    <section>
+        <div class="timeline">
+            <h2>
+                <span class="lang lang-en">Milestones along the way</span>
+                <span class="lang lang-zh">我们的足迹</span>
+                <span class="lang lang-de">Unsere Meilensteine</span>
+                <span class="lang lang-fr">Notre parcours</span>
+                <span class="lang lang-es">Nuestros hitos</span>
+                <span class="lang lang-ja">私たちの歩み</span>
+                <span class="lang lang-ko">주요 발자취</span>
+            </h2>
+            <div class="timeline-grid">
+                <div class="milestone">
+                    <div class="year">2015</div>
+                    <div class="title">
+                        <span class="lang lang-en">Foundation</span>
+                        <span class="lang lang-zh">公司成立</span>
+                        <span class="lang lang-de">Gründung</span>
+                        <span class="lang lang-fr">Fondation</span>
+                        <span class="lang lang-es">Fundación</span>
+                        <span class="lang lang-ja">創業</span>
+                        <span class="lang lang-ko">설립</span>
+                    </div>
+                    <p>
+                        <span class="lang lang-en">Founding team assembled from reliability engineering, OR and software architecture.</span>
+                        <span class="lang lang-zh">由可靠性工程、运筹学与软件架构领域的资深成员组建。</span>
+                        <span class="lang lang-de">Gründungsteam aus RAMS, OR und Software.</span>
+                        <span class="lang lang-fr">Équipe fondatrice issue de RAMS, RO et logiciel.</span>
+                        <span class="lang lang-es">Equipo fundador de RAMS, IO y software.</span>
+                        <span class="lang lang-ja">RAMS・OR・ソフト出身チームで創業。</span>
+                        <span class="lang lang-ko">RAMS·OR·소프트웨어 출신 팀 결성.</span>
+                    </p>
+                </div>
+                <div class="milestone">
+                    <div class="year">2021</div>
+                    <div class="title">
+                        <span class="lang lang-en">Core algorithm R&amp;D</span>
+                        <span class="lang lang-zh">核心算法研发</span>
+                        <span class="lang lang-de">Kernalgorithmik</span>
+                        <span class="lang lang-fr">R&amp;D algorithmique</span>
+                        <span class="lang lang-es">I+D de algoritmos</span>
+                        <span class="lang lang-ja">基幹アルゴリズム研究</span>
+                        <span class="lang lang-ko">핵심 알고리즘 R&D</span>
+                    </div>
+                    <p>
+                        <span class="lang lang-en">Non-linear LCC optimisation engine reaches industrial maturity.</span>
+                        <span class="lang lang-zh">基于 LCC 的非线性优化引擎达到工业级成熟度。</span>
+                        <span class="lang lang-de">Nichtlineare LCC-Engine erreicht Industriereife.</span>
+                        <span class="lang lang-fr">Moteur LCC non linéaire prêt pour l'industrie.</span>
+                        <span class="lang lang-es">Motor LCC no lineal listo para la industria.</span>
+                        <span class="lang lang-ja">非線形LCCエンジンが産業実用レベルに到達。</span>
+                        <span class="lang lang-ko">비선형 LCC 엔진이 산업 성숙도에 도달.</span>
+                    </p>
+                </div>
+                <div class="milestone">
+                    <div class="year">2022</div>
+                    <div class="title">
+                        <span class="lang lang-en">v1.0 in operation</span>
+                        <span class="lang lang-zh">1.0 版本投入运行</span>
+                        <span class="lang lang-de">v1.0 im Einsatz</span>
+                        <span class="lang lang-fr">v1.0 en opération</span>
+                        <span class="lang lang-es">v1.0 en operación</span>
+                        <span class="lang lang-ja">v1.0運用開始</span>
+                        <span class="lang lang-ko">v1.0 운영 시작</span>
+                    </div>
+                    <p>
+                        <span class="lang lang-en">First deployment with civil aviation maintenance operations.</span>
+                        <span class="lang lang-zh">首次部署服务于民航维护业务。</span>
+                        <span class="lang lang-de">Ersteinsatz in der Luftfahrtwartung.</span>
+                        <span class="lang lang-fr">Premier déploiement en maintenance aéronautique.</span>
+                        <span class="lang lang-es">Primer despliegue en aviación civil.</span>
+                        <span class="lang lang-ja">民航整備での初期導入。</span>
+                        <span class="lang lang-ko">민항 정비 분야 최초 도입.</span>
+                    </p>
+                </div>
+                <div class="milestone">
+                    <div class="year">2024</div>
+                    <div class="title">
+                        <span class="lang lang-en">Industry recognition</span>
+                        <span class="lang lang-zh">行业领跑</span>
+                        <span class="lang lang-de">Branchenanerkennung</span>
+                        <span class="lang lang-fr">Reconnaissance sectorielle</span>
+                        <span class="lang lang-es">Reconocimiento sectorial</span>
+                        <span class="lang lang-ja">業界での実績</span>
+                        <span class="lang lang-ko">업계 인정</span>
+                    </div>
+                    <p>
+                        <span class="lang lang-en">Partnership signings with multiple large-scale industrial operators.</span>
+                        <span class="lang lang-zh">与多家大型工业运营商达成战略合作。</span>
+                        <span class="lang lang-de">Strategische Partnerschaften mit Großbetreibern.</span>
+                        <span class="lang lang-fr">Partenariats avec grands opérateurs industriels.</span>
+                        <span class="lang lang-es">Alianzas con grandes operadores industriales.</span>
+                        <span class="lang lang-ja">大型産業運営者との戦略提携。</span>
+                        <span class="lang lang-ko">대형 산업 운영사와 전략 제휴.</span>
+                    </p>
+                </div>
+                <div class="milestone">
+                    <div class="year">2026</div>
+                    <div class="title">
+                        <span class="lang lang-en">Global delivery</span>
+                        <span class="lang lang-zh">全球化交付</span>
+                        <span class="lang lang-de">Globale Bereitstellung</span>
+                        <span class="lang lang-fr">Livraison mondiale</span>
+                        <span class="lang lang-es">Entrega global</span>
+                        <span class="lang lang-ja">グローバル提供</span>
+                        <span class="lang lang-ko">글로벌 제공</span>
+                    </div>
+                    <p>
+                        <span class="lang lang-en">NUMERIQ SOLUTIONS LTD operates as a UK-incorporated global consultancy.</span>
+                        <span class="lang lang-zh">NUMERIQ SOLUTIONS LTD 以英国注册主体，面向全球提供咨询。</span>
+                        <span class="lang lang-de">UK-registrierte Beratung mit weltweiter Lieferung.</span>
+                        <span class="lang lang-fr">Conseil enregistré au Royaume-Uni, livraison mondiale.</span>
+                        <span class="lang lang-es">Consultoría registrada en UK con cobertura global.</span>
+                        <span class="lang lang-ja">英国登記のグローバル・コンサルティング。</span>
+                        <span class="lang lang-ko">영국 등록 글로벌 컨설팅 운영.</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        let currentLang = localStorage.getItem('lora-lang') || 'zh-CN';
+    <!-- ============ Mission / Vision ============ -->
+    <section>
+        <h2 class="center">
+            <span class="lang lang-en">Mission &amp; philosophy</span>
+            <span class="lang lang-zh">使命与理念</span>
+            <span class="lang lang-de">Mission &amp; Philosophie</span>
+            <span class="lang lang-fr">Mission &amp; philosophie</span>
+            <span class="lang lang-es">Misión y filosofía</span>
+            <span class="lang lang-ja">ミッションと理念</span>
+            <span class="lang lang-ko">미션과 철학</span>
+        </h2>
+        <div class="dual-panel">
+            <div class="mission-panel">
+                <h3>
+                    <span class="lang lang-en">Mission</span>
+                    <span class="lang lang-zh">企业使命</span>
+                    <span class="lang lang-de">Mission</span>
+                    <span class="lang lang-fr">Mission</span>
+                    <span class="lang lang-es">Misión</span>
+                    <span class="lang lang-ja">企業ミッション</span>
+                    <span class="lang lang-ko">기업 미션</span>
+                </h3>
+                <p>
+                    <span class="lang lang-en">"Drive maintenance and operations decisions with algorithms, deliver optimal supportability for industrial-scale operators, and eliminate every avoidable unit of waste."</span>
+                    <span class="lang lang-zh">"以算法驱动维保与运营决策，为大型工业运营方提供最优保障策略，消灭每一份不必要的浪费。"</span>
+                    <span class="lang lang-de">„Wartung mit Algorithmen steuern, optimale Supportability liefern, jede vermeidbare Verschwendung eliminieren."</span>
+                    <span class="lang lang-fr">« Piloter la maintenance par les algorithmes et éliminer chaque gaspillage évitable. »</span>
+                    <span class="lang lang-es">"Conducir el mantenimiento con algoritmos y eliminar todo desperdicio evitable."</span>
+                    <span class="lang lang-ja">"アルゴリズムで保守を駆動し、回避可能な無駄を一切なくす。"</span>
+                    <span class="lang lang-ko">"알고리즘으로 유지보수를 주도하고 피할 수 있는 모든 낭비를 없앤다."</span>
+                </p>
+            </div>
+            <div class="vision-panel">
+                <h3>
+                    <span class="lang lang-en">Engineering philosophy</span>
+                    <span class="lang lang-zh">技术理念</span>
+                    <span class="lang lang-de">Engineering-Philosophie</span>
+                    <span class="lang lang-fr">Philosophie d'ingénierie</span>
+                    <span class="lang lang-es">Filosofía de ingeniería</span>
+                    <span class="lang lang-ja">エンジニアリング理念</span>
+                    <span class="lang lang-ko">엔지니어링 철학</span>
+                </h3>
+                <ul>
+                    <li>
+                        <span class="lang lang-en"><strong>Data-driven:</strong> no more gut-feel decisions.</span>
+                        <span class="lang lang-zh"><strong>数据驱动：</strong>拒绝拍脑袋决策。</span>
+                        <span class="lang lang-de"><strong>Datengetrieben:</strong> keine Bauchentscheidungen.</span>
+                        <span class="lang lang-fr"><strong>Pilotage par les données :</strong> finies les décisions à l'instinct.</span>
+                        <span class="lang lang-es"><strong>Basado en datos:</strong> sin decisiones intuitivas.</span>
+                        <span class="lang lang-ja"><strong>データ駆動：</strong>直感任せの判断を排除。</span>
+                        <span class="lang lang-ko"><strong>데이터 중심:</strong> 직관적 의사결정 지양.</span>
+                    </li>
+                    <li>
+                        <span class="lang lang-en"><strong>Standards first:</strong> strict adherence to international engineering frameworks.</span>
+                        <span class="lang lang-zh"><strong>标准先行：</strong>严格遵循国际通用工程标准。</span>
+                        <span class="lang lang-de"><strong>Standards zuerst:</strong> strenge Einhaltung internationaler Normen.</span>
+                        <span class="lang lang-fr"><strong>Normes d'abord :</strong> respect strict des cadres internationaux.</span>
+                        <span class="lang lang-es"><strong>Normas primero:</strong> apego estricto a marcos internacionales.</span>
+                        <span class="lang lang-ja"><strong>標準優先：</strong>国際工学規格を厳格に遵守。</span>
+                        <span class="lang lang-ko"><strong>표준 우선:</strong> 국제 표준을 엄격히 준수.</span>
+                    </li>
+                    <li>
+                        <span class="lang lang-en"><strong>Continuous evolution:</strong> always tracking the frontier of supportability and HPC.</span>
+                        <span class="lang lang-zh"><strong>持续进化：</strong>始终紧跟保障性与高性能计算前沿。</span>
+                        <span class="lang lang-de"><strong>Stete Evolution:</strong> immer am Puls der Supportability- und HPC-Forschung.</span>
+                        <span class="lang lang-fr"><strong>Évolution continue :</strong> à la pointe de la supportabilité et du HPC.</span>
+                        <span class="lang lang-es"><strong>Evolución continua:</strong> a la vanguardia de supportability y HPC.</span>
+                        <span class="lang lang-ja"><strong>進化を続ける：</strong>保守性とHPCの最前線を追う。</span>
+                        <span class="lang lang-ko"><strong>지속 진화:</strong> 유지보수성과 HPC의 최전선을 추적.</span>
+                    </li>
+                    <li>
+                        <span class="lang lang-en"><strong>Auditable delivery:</strong> every result reproducible, every parameter sensitivity-tested.</span>
+                        <span class="lang lang-zh"><strong>可审计交付：</strong>每个结果可复现，每个参数可做敏感度分析。</span>
+                        <span class="lang lang-de"><strong>Prüfbare Lieferung:</strong> reproduzierbar, mit Sensitivitätsanalyse.</span>
+                        <span class="lang lang-fr"><strong>Livraison auditable :</strong> reproductible, sensibilité incluse.</span>
+                        <span class="lang lang-es"><strong>Entrega auditable:</strong> reproducible y con análisis de sensibilidad.</span>
+                        <span class="lang lang-ja"><strong>監査可能な納品：</strong>再現性と感度分析を担保。</span>
+                        <span class="lang lang-ko"><strong>감사 가능한 납품:</strong> 재현성과 민감도 분석을 보장.</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
 
-        function updateUI() {
-            const data = i18n[currentLang];
-            const wrapper = document.getElementById('content-wrapper');
-            wrapper.style.opacity = 0;
-            
-            setTimeout(() => {
-                document.getElementById('lang-btn-text').innerText = data.btn;
-                document.getElementById('site-title').innerText = data.title;
-                document.getElementById('nav-logo').innerHTML = data.navLogo.includes('软件') ? '修理级别分析<span class="text-blue-600">软件</span>' : 'LORA <span class="text-blue-600">Software</span>';
-                document.getElementById('nav-home').innerText = data.navHome;
-                document.getElementById('nav-features').innerText = data.navFeat;
-                document.getElementById('nav-solutions').innerText = data.navSol;
-                document.getElementById('nav-about').innerText = data.navAbout;
-                document.getElementById('nav-demo').innerText = data.navDemo;
-                document.getElementById('about-hero-t').innerHTML = data.aboutHeroT;
-                document.getElementById('about-hero-d1').innerText = data.aboutHeroD1;
-                document.getElementById('about-hero-d2').innerText = data.aboutHeroD2;
-                document.getElementById('milestone-t').innerText = data.milestoneT;
-                document.getElementById('m1-t').innerText = data.m1t; document.getElementById('m1-d').innerText = data.m1d;
-                document.getElementById('m2-t').innerText = data.m2t; document.getElementById('m2-d').innerText = data.m2d;
-                document.getElementById('m3-t').innerText = data.m3t; document.getElementById('m3-d').innerText = data.m3d;
-                document.getElementById('m4-t').innerText = data.m4t; document.getElementById('m4-d').innerText = data.m4d;
-                document.getElementById('mission-t').innerText = data.missionT;
-                document.getElementById('mission-c').innerText = data.missionC;
-                document.getElementById('vision-t').innerText = data.visionT;
-                document.getElementById('v1').innerText = data.v1;
-                document.getElementById('v2').innerText = data.v2;
-                document.getElementById('v3').innerText = data.v3;
-                document.getElementById('footer-text').innerText = data.footer;
-                
-                document.documentElement.lang = currentLang;
-                wrapper.style.opacity = 1;
-            }, 150);
+    <!-- ============ Company info ============ -->
+    <section>
+        <h2 class="center">
+            <span class="lang lang-en">Corporate information</span>
+            <span class="lang lang-zh">公司信息</span>
+            <span class="lang lang-de">Unternehmensinformation</span>
+            <span class="lang lang-fr">Informations société</span>
+            <span class="lang lang-es">Información corporativa</span>
+            <span class="lang lang-ja">会社情報</span>
+            <span class="lang lang-ko">회사 정보</span>
+        </h2>
+        <div class="contact-card">
+            <div class="contact-block">
+                <div class="contact-icon">🏛</div>
+                <div>
+                    <h4>
+                        <span class="lang lang-en">Legal entity</span>
+                        <span class="lang lang-zh">注册主体</span>
+                        <span class="lang lang-de">Juristische Person</span>
+                        <span class="lang lang-fr">Entité juridique</span>
+                        <span class="lang lang-es">Entidad legal</span>
+                        <span class="lang lang-ja">法的主体</span>
+                        <span class="lang lang-ko">법인</span>
+                    </h4>
+                    <p>NUMERIQ SOLUTIONS LTD</p>
+                    <p class="lang lang-en">Registered in England and Wales. Company number 17262374.</p>
+                    <p class="lang lang-zh">于英格兰与威尔士注册，公司编号 17262374。</p>
+                    <p class="lang lang-de">In England und Wales eingetragen, Unternehmensnummer 17262374.</p>
+                    <p class="lang lang-fr">Enregistrée en Angleterre et au Pays de Galles, n° 17262374.</p>
+                    <p class="lang lang-es">Registrada en Inglaterra y Gales, n.º 17262374.</p>
+                    <p class="lang lang-ja">英国（イングランド及びウェールズ）登記、会社番号 17262374。</p>
+                    <p class="lang lang-ko">잉글랜드 및 웨일스 등록, 회사 번호 17262374.</p>
+                </div>
+            </div>
+            <div class="contact-block">
+                <div class="contact-icon">🌐</div>
+                <div>
+                    <h4>
+                        <span class="lang lang-en">Practice scope</span>
+                        <span class="lang lang-zh">业务范围</span>
+                        <span class="lang lang-de">Tätigkeitsbereich</span>
+                        <span class="lang lang-fr">Champ d'activité</span>
+                        <span class="lang lang-es">Ámbito de actividad</span>
+                        <span class="lang lang-ja">事業範囲</span>
+                        <span class="lang lang-ko">사업 범위</span>
+                    </h4>
+                    <p class="lang lang-en">High-performance computing, simulation, supportability and life-cycle cost engineering — exclusively for civil industry, infrastructure and logistics.</p>
+                    <p class="lang lang-zh">高性能计算、仿真、保障性与全寿命周期成本工程，业务严格限定于民用工业、基础设施与物流。</p>
+                    <p class="lang lang-de">HPC, Simulation, Supportability und LCC — ausschließlich für zivile Industrie und Infrastruktur.</p>
+                    <p class="lang lang-fr">HPC, simulation, supportabilité et LCC — uniquement pour l'industrie civile.</p>
+                    <p class="lang lang-es">HPC, simulación, supportability y LCC — exclusivamente para industria civil.</p>
+                    <p class="lang lang-ja">HPC・シミュレーション・保守性・LCC、民間産業に特化。</p>
+                    <p class="lang lang-ko">HPC·시뮬레이션·유지보수성·LCC, 민간 산업에 특화.</p>
+                </div>
+            </div>
+            <div class="contact-block">
+                <div class="contact-icon">✉</div>
+                <div>
+                    <h4>
+                        <span class="lang lang-en">E-mail</span>
+                        <span class="lang lang-zh">电子邮箱</span>
+                        <span class="lang lang-de">E-Mail</span>
+                        <span class="lang lang-fr">Courriel</span>
+                        <span class="lang lang-es">Correo</span>
+                        <span class="lang lang-ja">メール</span>
+                        <span class="lang lang-ko">이메일</span>
+                    </h4>
+                    <p>ze@snnu.edu.cn</p>
+                </div>
+            </div>
+            <div class="contact-block">
+                <div class="contact-icon">☎</div>
+                <div>
+                    <h4>
+                        <span class="lang lang-en">Phone</span>
+                        <span class="lang lang-zh">联系电话</span>
+                        <span class="lang lang-de">Telefon</span>
+                        <span class="lang lang-fr">Téléphone</span>
+                        <span class="lang lang-es">Teléfono</span>
+                        <span class="lang lang-ja">電話</span>
+                        <span class="lang lang-ko">전화</span>
+                    </h4>
+                    <p>+86 65606565</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <div class="footer-inner">
+        <div class="footer-brand">NUMERIQ SOLUTIONS LTD</div>
+        <p>
+            <span class="lang lang-en">High-Performance Computing &amp; Industrial Simulation Consulting</span>
+            <span class="lang lang-zh">高性能计算与工业仿真咨询</span>
+            <span class="lang lang-de">Hochleistungsrechnen &amp; Industrielle Simulationsberatung</span>
+            <span class="lang lang-fr">Calcul Haute Performance &amp; Conseil en Simulation Industrielle</span>
+            <span class="lang lang-es">Computación de Alto Rendimiento y Consultoría de Simulación</span>
+            <span class="lang lang-ja">高性能計算と産業シミュレーションコンサルティング</span>
+            <span class="lang lang-ko">고성능 컴퓨팅 및 산업 시뮬레이션 컨설팅</span>
+        </p>
+        <div class="footer-links">
+            <a href="index.html"><span class="lang lang-en">Home</span><span class="lang lang-zh">首页</span><span class="lang lang-de">Start</span><span class="lang lang-fr">Accueil</span><span class="lang lang-es">Inicio</span><span class="lang lang-ja">ホーム</span><span class="lang lang-ko">홈</span></a>
+            <a href="features.html"><span class="lang lang-en">Technology</span><span class="lang lang-zh">技术能力</span><span class="lang lang-de">Technologie</span><span class="lang lang-fr">Technologie</span><span class="lang lang-es">Tecnología</span><span class="lang lang-ja">テクノロジー</span><span class="lang lang-ko">기술</span></a>
+            <a href="solutions.html"><span class="lang lang-en">Solutions</span><span class="lang lang-zh">行业方案</span><span class="lang lang-de">Lösungen</span><span class="lang lang-fr">Solutions</span><span class="lang lang-es">Soluciones</span><span class="lang lang-ja">ソリューション</span><span class="lang lang-ko">솔루션</span></a>
+            <a href="about.html"><span class="lang lang-en">About</span><span class="lang lang-zh">关于我们</span><span class="lang lang-de">Über uns</span><span class="lang lang-fr">À propos</span><span class="lang lang-es">Nosotros</span><span class="lang lang-ja">会社情報</span><span class="lang lang-ko">회사 소개</span></a>
+            <a href="terms.html"><span class="lang lang-en">Terms of Service</span><span class="lang lang-zh">服务条款</span><span class="lang lang-de">Nutzungsbedingungen</span><span class="lang lang-fr">Conditions</span><span class="lang lang-es">Términos</span><span class="lang lang-ja">利用規約</span><span class="lang lang-ko">이용약관</span></a>
+            <a href="privacy.html"><span class="lang lang-en">Privacy Policy</span><span class="lang lang-zh">隐私政策</span><span class="lang lang-de">Datenschutz</span><span class="lang lang-fr">Confidentialité</span><span class="lang lang-es">Privacidad</span><span class="lang lang-ja">プライバシー</span><span class="lang lang-ko">개인정보</span></a>
+            <a href="refund.html"><span class="lang lang-en">Refund Policy</span><span class="lang lang-zh">退款政策</span><span class="lang lang-de">Rückerstattung</span><span class="lang lang-fr">Remboursement</span><span class="lang lang-es">Reembolso</span><span class="lang lang-ja">返金規定</span><span class="lang lang-ko">환불 규정</span></a>
+        </div>
+        <p class="small">NUMERIQ SOLUTIONS LTD is a company registered in England and Wales with company number 17262374.</p>
+        <p class="small">© 2024–2026 NUMERIQ SOLUTIONS LTD. All rights reserved.</p>
+    </div>
+</footer>
+
+<script>
+function setLang(lang) {
+    document.documentElement.lang = lang;
+    localStorage.setItem('site-lang', lang);
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.remove('active');
+        const t = btn.innerText.toLowerCase();
+        if ( t === lang ||
+            (lang==='zh' && btn.innerText==='中文') ||
+            (lang==='de' && t==='de') ||
+            (lang==='fr' && t==='fr') ||
+            (lang==='es' && t==='es') ||
+            (lang==='ja' && t==='ja') ||
+            (lang==='ko' && t==='ko') ) {
+            btn.classList.add('active');
         }
+    });
+}
+setLang(localStorage.getItem('site-lang') || 'en');
+</script>
 
-        function toggleLang() {
-            currentLang = currentLang === 'zh-CN' ? 'en' : 'zh-CN';
-            localStorage.setItem('lora-lang', currentLang);
-            updateUI();
-        }
-
-        window.onload = updateUI;
-    </script>
 </body>
 </html>
